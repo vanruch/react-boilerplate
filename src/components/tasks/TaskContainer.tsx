@@ -1,17 +1,17 @@
 import React from 'react'
-import { Task } from '../../models/task'
 import { TaskCard } from './TaskCard'
 import styled from 'styled-components'
+import { useTasks } from '../../hooks/useTasks'
 
 interface TaskContainerProps {
-  tasks: Task[]
   className?: string
 }
 
-function TaskContainer({ tasks, className }: TaskContainerProps ) {
+function TaskContainer({ className }: TaskContainerProps ) {
+  const { tasks } = useTasks()
   return (
     <div className={className}>
-      {tasks.map(task => <TaskCard key={task.title} task={task}/>)}
+      {tasks.map((task, id) => <TaskCard key={task.title} task={task} id={id}/>)}
     </div>
   )
 }
@@ -19,10 +19,11 @@ function TaskContainer({ tasks, className }: TaskContainerProps ) {
 const StyledContainer = styled(TaskContainer)`
   display: flex;
   flex-direction: column;
+  margin-top: 10px;
   
   & > *:not(:last-child) {
     margin-bottom: 5px;
   }
 `
 
-export  {StyledContainer as TaskContainer}
+export {StyledContainer as TaskContainer}
