@@ -11,7 +11,7 @@ interface TaskContainerProps {
 function TaskContainer({ tasks, className }: TaskContainerProps ) {
   return (
     <div className={className}>
-      {tasks.map(task => <TaskCard task={task}/>)}
+      {tasks.map(task => <TaskCard key={task.title} task={task}/>)}
     </div>
   )
 }
