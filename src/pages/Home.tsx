@@ -8,20 +8,9 @@ export function Home() {
     <Page>
       <PageContent>
         <Title>Title</Title>
-        <p>Use the form below to calculate your installemts</p>
+        <p>This is a simple React App</p>
         <Separator />
-        <Separator />
-        <p>This boilerplate includes several neat things:</p>
-        <ol>
-          <li>Metamask connection,</li>
-          <li>Transaction history. Click the account address to open,</li>
-          <li>
-            Automatic blockchain sync. Note that when the block number on the bottom changes there appears a little
-            spinner which indicates that the latest state is being fetched,
-          </li>
-          <li>Git commit version,</li>
-          <li>Ability to send DAI.</li>
-        </ol>
+        <p>Lorem ipsum dupa</p>
       </PageContent>
     </Page>
   )

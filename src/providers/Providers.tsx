@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react'
-import { BrowserRouter } from 'react-router-dom'
 import { GlobalStyle } from './GlobalStyle'
 
 interface Props {
@@ -7,9 +6,9 @@ interface Props {
 }
 export function Providers(props: Props) {
   return (
-    <BrowserRouter>
+    <>
       <GlobalStyle />
       {props.children}
-    </BrowserRouter>
+    </>
   )
 }
