@@ -9,7 +9,7 @@ export const TasksContext = createContext({
 
 export const TasksProvider = ({children}: {children: ReactNode}) => {
   const [tasks, setTasks] = useState(existingTasks)
-  const addTask = useCallback((task: Task) => (console.log(task), setTasks([task, ...tasks])), [tasks])
+  const addTask = useCallback((task: Task) => setTasks([task, ...tasks]), [tasks])
 
   const contextValue = {
     tasks,
